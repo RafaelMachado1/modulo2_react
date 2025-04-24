@@ -1,17 +1,24 @@
-import { Garagem } from "./Componentes/Garagem/Garagem";
-import { GlobalStyled } from "./GlobalStyle";
+import React from "react";
+//import "./styles.css";
+import { Header } from "./Componentes/Header/Header"
+import { Main } from "./Componentes/Main/Main"
+import  {Footer}  from "./Componentes/Footer/Footer";
+import GlobalStyle from "./GlobalStyle";
+
+
 
 export default function App() {
-  const nome = "Labenu";
-
-  function apresentaGaragem() {
-    alert(`Boas vindas à garagem de ${nome}`);
-  }
+  
 
   return (
-    <div className="App">
-      <GlobalStyled />
-      <Garagem nome={nome} mensagemAprentacao={apresentaGaragem} />
+    <div>
+      <GlobalStyle/>
+      <div className="tela-inteira">
+       <Header/>
+        <Main />
+        <Footer/>
+       
+      </div>
     </div>
   );
 }
