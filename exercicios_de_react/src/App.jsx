@@ -1,24 +1,15 @@
-import React from "react";
-//import "./styles.css";
-import { Header } from "./Componentes/Header/Header"
-import { Main } from "./Componentes/Main/Main"
-import  {Footer}  from "./Componentes/Footer/Footer";
-import GlobalStyle from "./GlobalStyle";
-
-
+import { useState } from 'react'
+import { Garagem } from './Componentes/Garagem/index.jsx'
+import { GlobalStyled } from './GlobalStyled.jsx'
 
 export default function App() {
-  
+  const [nome, setNome] = useState("Labenu")
 
   return (
-    <div>
-      <GlobalStyle/>
-      <div className="tela-inteira">
-       <Header/>
-        <Main />
-        <Footer/>
-       
-      </div>
+    <div className="App">
+      <GlobalStyled />
+
+      <Garagem nome={nome}  alterarNome={setNome} />
     </div>
-  );
+  )
 }
